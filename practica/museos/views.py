@@ -90,7 +90,7 @@ def personalizar(request):
 		color = "#FCFCFC"
 
 	css = get_template("change.css")
-    
+
 	c = Context({'letra':letra, 'color':color})
 	renderizado = css.render(c)
 	return HttpResponse(renderizado, content_type="text/css")
@@ -302,7 +302,7 @@ def museos(request):
 		form_user = 'Bienvenido ' + username
 		form_user += '<br><br><a href="http://127.0.0.1:8000/logout" > Logout </a>'
 	else:
-		form_user = "Para loguearse vaya a la pagina de Inicio"
+		form_user = "Para loguearse vaya a la página de Inicio"
 
 	if request.method == "POST":
 		filtro_distrito = request.POST['distrito']
@@ -322,7 +322,7 @@ def museos(request):
 					lista_filtrada += "<p>" + nombre_museo + "</p><li><a href=" + url_museo + ">" + url_museo + "</a></li>"
 
 			if Encontrado == False:		#Distrito no válido
-				lista_filtrada = "Introduzca un nuevo distrito. " + filtro_distrito + " no es válido"
+				lista_filtrada = "Introduzca un nuevo distrito. " + filtro_distrito + " no es válido."
 
 		c = Context({'distrito': filtrar, 'lista': lista_filtrada, 'login':form_user})
 
@@ -407,9 +407,9 @@ def museos_id(request, recurso):
                 Response += "Teléfono: " + telefono + "</br>"
                 Response += "Email: " + email + "</br>" + list_coments + "</ol>"
                 if num_megusta != 0:
-                    Response += "</br><li>Numero de me gustas es: " + str(num_megusta) + "<br>"
+                    Response += "</br><li>Número de me gustas: " + str(num_megusta) + "<br>"
                 else:
-                    Response += "</br><li>Se el primero en indicar que te gusta la página<br>"
+                    Response += "</br><li>Sea el primero en indicar que le gusta la página<br>"
 
         if request.user.is_authenticated():
             username = str(request.user)
@@ -422,7 +422,7 @@ def museos_id(request, recurso):
             Response += formulario
 
         else:
-            form_user = "Para entrar en su cuenta vaya al botón de Inicio."
+            form_user = "Para entrar en su cuenta vaya a la página de Inicio."
 
         megusta = ''
         megusta += '<br> Indica que te gusta este museo</br>'
@@ -431,7 +431,7 @@ def museos_id(request, recurso):
         Response += megusta
 
     except ObjectDoesNotExist:
-        Response = "El id introducido no se corresponde con ningún museo"
+        Response = "El id introducido no se corresponde con ningún museo."
 
     c = Context({'lista': Response, 'login': form_user})
     renderizado = template.render(c)
