@@ -1,0 +1,5 @@
+
+body {
+	font-size: {{letra| safe}};
+	color: {{color| safe}};
+}

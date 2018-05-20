@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block acces %}
+{% endblock %}
+
+{% block user %}
+<h1>Identifícate</h1>
+<div class="userbox">
+		<div class="userform">
+			{{login|safe}}
+		</div>
+		<div class="district">
+			 {{distrito|safe}}
+		</div>
+{% endblock %}
+
+
+{% block listado %}
+	<h1>Listado completo de Museos de Madrid</h1>
+	{{lista|safe}}
+{% endblock %}

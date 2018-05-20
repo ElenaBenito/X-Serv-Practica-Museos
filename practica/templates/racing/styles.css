@@ -1,0 +1,163 @@
+/* Carbon Racing styles */
+
+body {
+	background: url('images/carbon-bg.jpg') #000;
+	background-repeat: repeat;
+	color: #FFFFFF;
+	font-family: arial;
+	font-size: 12px;
+}
+
+.ic {
+	border:0;
+	float:right;
+	background:#fff;
+	color:#ff0000;
+	width:50%;
+	line-height:10px;
+	font-size:10px;
+	margin:-220% 0 0 0;
+	overflow:hidden;
+	padding:0
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 18px;
+	width: 100%;
+	display: block;
+	border-bottom: 1px dotted #BBB;
+}
+
+img {
+	margin: 5px 10px 5px 3px;
+	height: 310px;
+  width: 1560px;
+}
+
+.userbox {
+    width: auto;
+    height: 105px;
+    padding: -3px 6px 3px 6px;
+    clear: both;
+    opacity: 0.9;
+}
+
+.userform {
+    width: auto;
+    height: auto;
+    padding: -3px 6px 3px 6px;
+    clear: both;
+    opacity: 0.9;
+}
+
+.district{
+	width: auto;
+	float: center;
+	margin-bottom: 1px;
+}
+
+.boxinner{
+	color: auto;
+}
+
+#wrapper {
+	width: auto;
+	height: auto;
+	margin: auto;
+}
+
+#header {
+	height: auto;
+  width: auto;
+	background: url('racing/images/banner.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#menu {
+	width: auto;
+	padding: 10px;
+	background: url('images/menu-bg.png');
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+#menu ul {
+	list-style-type: none;
+	width: 100%;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+#menu ul li {
+	display: inline;
+	padding-right: 30px;
+}
+
+#menu ul li a:link, #menu ul li a:active, #menu ul li a:visited {
+	color: #00FFFF;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#menu ul li a:hover {
+	color: #ff0000;
+}
+
+#content {
+	width: auto;
+	padding: 10px;
+	background: url('images/content-bg.png');
+	border: 1px solid #888;
+	overflow: auto;
+}
+
+#content-left {
+	width: auto;
+	height: auto;
+	padding-left: 10px;
+	padding-right: 20px;
+	float: left;
+}
+
+#content-right {
+	width: 260px;
+	height: auto;
+	padding-left: 20px;
+	float: right;
+}
+
+#content-center {
+	width: auto;
+	height: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	float: left;
+}
+
+#footer {
+	clear: both;
+	width: 880px;
+	text-align: center;
+	vertical-align: middle;
+	height: 150px;
+	padding-left: 300px;
+	padding-top: 10px;
+	color: #000000;
+	font-weight: bold;
+}
+
+#footer a {
+	color: #000000;
+}
+
+#acces {
+	width: auto;
+	height: auto;
+}
+
+#listausuarios {
+	width: auto;
+	height: auto;
+	padding-top: 20px;
+}

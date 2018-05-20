@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+{% csrf_token %}
+
+
+{% block user %}
+	<div class="userform">
+		{{css|safe}}
+	</div>
+{% endblock %}
+
+
+{% block listado %}
+	{{lista_selecc|safe}}
+	<br><br>
+	{% if seleccionados.has_previous %}
+		<a href="?page={{ seleccionados.previous_page_number }}"> Previous page</a>
+	{% endif %}
+
+	{{ seleccionados.number }} - {{ seleccionados.paginator.num_pages }}
+
+	{% if seleccionados.has_next %}
+		<a href="?page={{ seleccionados.next_page_number }}"> Next page </a>
+	{% endif %}
+{% endblock %}
+
+{% block users %}
+	<div class="title">
+		{{titulo|safe}}
+	</div>
+	<div class="museums">
+		{{form|safe}}
+		{{lista|safe}}
+	</div>
+{% endblock %}
