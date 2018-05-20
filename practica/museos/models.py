@@ -22,14 +22,12 @@ class Museo(models.Model):
 	coordenada_y = models.CharField(max_length=32)
 	cont_coments = models.IntegerField(default=0)
 	cont_megusta = models.IntegerField(default=0)
-
 	telefono = models.CharField(max_length=50)
 	email = models.CharField(max_length=50)
 
 class Comentario(models.Model):
 	museo = models.ForeignKey(Museo)
 	coment = models.TextField()
-
 
 class Usuario(models.Model):
 	nombre = models.OneToOneField(User)
